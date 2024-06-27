@@ -11,7 +11,13 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-import os
+import environ
+
+
+# Initialize environment variables
+env = environ.Env()
+environ.Env.read_env()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv(
-    "SECRET_KEY", "django-insecure-y_94#t2e1^tf(h#^0$c)^!zxk24%j)y!xj20vz)^08^_3l9bmd"
-)
+# SECRET_KEY = os.getenv(
+#     "SECRET_KEY", "django-insecure-y_94#t2e1^tf(h#^0$c)^!zxk24%j)y!xj20vz)^08^_3l9bmd"
+# )
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -130,3 +136,21 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_USE_TLS = True
+
+# These should be set in the .env file
+# EMAIL_HOST = os.getenv("EMAIL_HOST", None)
+# EMAIL_PORT = os.getenv("EMAIL_PORT", None)
+# EMAIL_HOST_USER = os.getenv("EMAIL_USER", None)
+# EMAIL_HOST_PASSWORD = os.getenv("EMAIL_PASSWORD", None)
+
+REST_FRAMEWORK = {
+    "DEFAULT_RENDERER_CLASSES": ("rest_framework.renderers.JSONRenderer",),
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ),
+    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
+}
