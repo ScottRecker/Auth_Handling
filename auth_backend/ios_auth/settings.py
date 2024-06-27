@@ -27,6 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = env("SECRET_KEY")
 # SECRET_KEY = os.getenv(
 #     "SECRET_KEY", "django-insecure-y_94#t2e1^tf(h#^0$c)^!zxk24%j)y!xj20vz)^08^_3l9bmd"
 # )
@@ -141,16 +142,16 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_USE_TLS = True
 
-# These should be set in the .env file
-# EMAIL_HOST = os.getenv("EMAIL_HOST", None)
-# EMAIL_PORT = os.getenv("EMAIL_PORT", None)
-# EMAIL_HOST_USER = os.getenv("EMAIL_USER", None)
-# EMAIL_HOST_PASSWORD = os.getenv("EMAIL_PASSWORD", None)
+# These should already be set in the .env file
+EMAIL_HOST = env("EMAIL_HOST")
+EMAIL_PORT = env("EMAIL_PORT")
+EMAIL_HOST_USER = env("EMAIL_USER")
+EMAIL_HOST_PASSWORD = env("EMAIL_PASSWORD")
 
 REST_FRAMEWORK = {
     "DEFAULT_RENDERER_CLASSES": ("rest_framework.renderers.JSONRenderer",),
+    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
-    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
 }
