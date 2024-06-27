@@ -27,8 +27,10 @@ SECRET_KEY = os.getenv(
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
 SERVER_BASE_URL = "http://127.0.0.1:8000"
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ["*"]  # https://mydomain.com
 
 
 # Application definition
@@ -40,6 +42,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "api.apps.ApiConfig",
+    "rest_framework",
+    "rest_framework_simplejwt",
+    "rest_framework_simplejwt.token_blacklist",
 ]
 
 MIDDLEWARE = [
