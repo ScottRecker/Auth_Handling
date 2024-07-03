@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <title>Account Activation</title>
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+  </head>
+  <body>
+    {% if failed_reason %}
+    <h1>{{ failed_reason }}</h1>
+    {% else %}
+    <h1>Account Activated!</h1>
+    {% endif %}
+  </body>
+</html>
