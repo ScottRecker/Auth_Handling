@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2D3C6402C372420000F5E7C /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C63F2C372420000F5E7C /* UIView+Extensions.swift */; };
+		D2D3C6422C372754000F5E7C /* Button+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C6412C372754000F5E7C /* Button+Extensions.swift */; };
+		D2D3C6442C3730ED000F5E7C /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C6432C3730ED000F5E7C /* UITextField+Extensions.swift */; };
+		D2D3C6462C373310000F5E7C /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C6452C373310000F5E7C /* UITextView+Extensions.swift */; };
+		D2D3C6482C373391000F5E7C /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C6472C373391000F5E7C /* UIViewController+Extensions.swift */; };
 		D2D941B92C35FED2002A8678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D941B82C35FED2002A8678 /* AppDelegate.swift */; };
 		D2D941C22C35FED4002A8678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2D941C12C35FED4002A8678 /* Assets.xcassets */; };
 		D2D941C52C35FED5002A8678 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D2D941C42C35FED5002A8678 /* Base */; };
@@ -14,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D2D3C63F2C372420000F5E7C /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		D2D3C6412C372754000F5E7C /* Button+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extensions.swift"; sourceTree = "<group>"; };
+		D2D3C6432C3730ED000F5E7C /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		D2D3C6452C373310000F5E7C /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
+		D2D3C6472C373391000F5E7C /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		D2D941B52C35FED2002A8678 /* iOS Auth Handling UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Auth Handling UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D941B82C35FED2002A8678 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2D941C12C35FED4002A8678 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,6 +43,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D2D3C63E2C3723A8000F5E7C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D2D3C6412C372754000F5E7C /* Button+Extensions.swift */,
+				D2D3C6432C3730ED000F5E7C /* UITextField+Extensions.swift */,
+				D2D3C6452C373310000F5E7C /* UITextView+Extensions.swift */,
+				D2D3C63F2C372420000F5E7C /* UIView+Extensions.swift */,
+				D2D3C6472C373391000F5E7C /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D2D941AC2C35FED2002A8678 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +78,7 @@
 				D2D941C12C35FED4002A8678 /* Assets.xcassets */,
 				D2D941C62C35FED5002A8678 /* Info.plist */,
 				D2D941C32C35FED5002A8678 /* LaunchScreen.storyboard */,
+				D2D3C63E2C3723A8000F5E7C /* Extensions */,
 				D2D941E92C35FF90002A8678 /* Model Layer */,
 				D2D941EA2C35FF9D002A8678 /* Nav Coordinators */,
 				D2D941E82C35FF84002A8678 /* Screens */,
@@ -163,7 +186,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2D3C6402C372420000F5E7C /* UIView+Extensions.swift in Sources */,
+				D2D3C6462C373310000F5E7C /* UITextView+Extensions.swift in Sources */,
+				D2D3C6422C372754000F5E7C /* Button+Extensions.swift in Sources */,
+				D2D3C6482C373391000F5E7C /* UIViewController+Extensions.swift in Sources */,
 				D2D941EC2C36002F002A8678 /* LoginViewController.swift in Sources */,
+				D2D3C6442C3730ED000F5E7C /* UITextField+Extensions.swift in Sources */,
 				D2D941B92C35FED2002A8678 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
