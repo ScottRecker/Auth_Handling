@@ -12,6 +12,8 @@
 		D2D3C6442C3730ED000F5E7C /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C6432C3730ED000F5E7C /* UITextField+Extensions.swift */; };
 		D2D3C6462C373310000F5E7C /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C6452C373310000F5E7C /* UITextView+Extensions.swift */; };
 		D2D3C6482C373391000F5E7C /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C6472C373391000F5E7C /* UIViewController+Extensions.swift */; };
+		D2D3C64B2C374A23000F5E7C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C64A2C374A23000F5E7C /* HomeViewController.swift */; };
+		D2D3C64E2C375C16000F5E7C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C64D2C375C16000F5E7C /* RegisterViewController.swift */; };
 		D2D941B92C35FED2002A8678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D941B82C35FED2002A8678 /* AppDelegate.swift */; };
 		D2D941C22C35FED4002A8678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2D941C12C35FED4002A8678 /* Assets.xcassets */; };
 		D2D941C52C35FED5002A8678 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D2D941C42C35FED5002A8678 /* Base */; };
@@ -24,6 +26,8 @@
 		D2D3C6432C3730ED000F5E7C /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		D2D3C6452C373310000F5E7C /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
 		D2D3C6472C373391000F5E7C /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		D2D3C64A2C374A23000F5E7C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D2D3C64D2C375C16000F5E7C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D2D941B52C35FED2002A8678 /* iOS Auth Handling UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Auth Handling UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D941B82C35FED2002A8678 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2D941C12C35FED4002A8678 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +57,22 @@
 				D2D3C6472C373391000F5E7C /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D2D3C6492C374A13000F5E7C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D2D3C64A2C374A23000F5E7C /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D2D3C64C2C375BDA000F5E7C /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				D2D3C64D2C375C16000F5E7C /* RegisterViewController.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		D2D941AC2C35FED2002A8678 = {
@@ -89,6 +109,7 @@
 		D2D941E82C35FF84002A8678 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D2D3C6492C374A13000F5E7C /* Home */,
 				D2D941ED2C36004A002A8678 /* Login */,
 			);
 			path = Screens;
