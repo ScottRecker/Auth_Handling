@@ -19,6 +19,8 @@
 		D2D3C6562C386B54000F5E7C /* FormError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C6552C386B54000F5E7C /* FormError.swift */; };
 		D2D3C6582C386B87000F5E7C /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C6572C386B87000F5E7C /* KeychainError.swift */; };
 		D2D3C65A2C386BB7000F5E7C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C6592C386BB7000F5E7C /* NetworkError.swift */; };
+		D2D3C65D2C386DA5000F5E7C /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C65C2C386DA5000F5E7C /* AccessToken.swift */; };
+		D2D3C65F2C386E8E000F5E7C /* AccessTokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C65E2C386E8E000F5E7C /* AccessTokenStorage.swift */; };
 		D2D941B92C35FED2002A8678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D941B82C35FED2002A8678 /* AppDelegate.swift */; };
 		D2D941C22C35FED4002A8678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2D941C12C35FED4002A8678 /* Assets.xcassets */; };
 		D2D941C52C35FED5002A8678 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D2D941C42C35FED5002A8678 /* Base */; };
@@ -38,6 +40,8 @@
 		D2D3C6552C386B54000F5E7C /* FormError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormError.swift; sourceTree = "<group>"; };
 		D2D3C6572C386B87000F5E7C /* KeychainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
 		D2D3C6592C386BB7000F5E7C /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		D2D3C65C2C386DA5000F5E7C /* AccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
+		D2D3C65E2C386E8E000F5E7C /* AccessTokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenStorage.swift; sourceTree = "<group>"; };
 		D2D941B52C35FED2002A8678 /* iOS Auth Handling UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Auth Handling UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D941B82C35FED2002A8678 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2D941C12C35FED4002A8678 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,6 +108,15 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		D2D3C65B2C386D7E000F5E7C /* System */ = {
+			isa = PBXGroup;
+			children = (
+				D2D3C65C2C386DA5000F5E7C /* AccessToken.swift */,
+				D2D3C65E2C386E8E000F5E7C /* AccessTokenStorage.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
 		D2D941AC2C35FED2002A8678 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +163,7 @@
 		D2D941E92C35FF90002A8678 /* Model Layer */ = {
 			isa = PBXGroup;
 			children = (
+				D2D3C65B2C386D7E000F5E7C /* System */,
 			);
 			path = "Model Layer";
 			sourceTree = "<group>";
@@ -250,9 +264,11 @@
 				D2D3C64B2C374A23000F5E7C /* HomeViewController.swift in Sources */,
 				D2D3C6582C386B87000F5E7C /* KeychainError.swift in Sources */,
 				D2D3C6482C373391000F5E7C /* UIViewController+Extensions.swift in Sources */,
+				D2D3C65F2C386E8E000F5E7C /* AccessTokenStorage.swift in Sources */,
 				D2D941EC2C36002F002A8678 /* LoginViewController.swift in Sources */,
 				D2D3C6442C3730ED000F5E7C /* UITextField+Extensions.swift in Sources */,
 				D2D941B92C35FED2002A8678 /* AppDelegate.swift in Sources */,
+				D2D3C65D2C386DA5000F5E7C /* AccessToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
