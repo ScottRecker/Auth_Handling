@@ -111,6 +111,7 @@
 			children = (
 				D2D3C6492C374A13000F5E7C /* Home */,
 				D2D941ED2C36004A002A8678 /* Login */,
+				D2D3C64C2C375BDA000F5E7C /* Register */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -207,9 +208,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2D3C64E2C375C16000F5E7C /* RegisterViewController.swift in Sources */,
 				D2D3C6402C372420000F5E7C /* UIView+Extensions.swift in Sources */,
 				D2D3C6462C373310000F5E7C /* UITextView+Extensions.swift in Sources */,
 				D2D3C6422C372754000F5E7C /* Button+Extensions.swift in Sources */,
+				D2D3C64B2C374A23000F5E7C /* HomeViewController.swift in Sources */,
 				D2D3C6482C373391000F5E7C /* UIViewController+Extensions.swift in Sources */,
 				D2D941EC2C36002F002A8678 /* LoginViewController.swift in Sources */,
 				D2D3C6442C3730ED000F5E7C /* UITextField+Extensions.swift in Sources */,
