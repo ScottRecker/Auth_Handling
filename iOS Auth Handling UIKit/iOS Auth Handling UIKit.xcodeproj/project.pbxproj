@@ -144,7 +144,6 @@
 				D2D3C6522C386AF7000F5E7C /* Errors */,
 				D2D941E92C35FF90002A8678 /* Model Layer */,
 				D2D3C64F2C376ADC000F5E7C /* Nav Coordinator */,
-				D2D941EA2C35FF9D002A8678 /* Nav Coordinators */,
 				D2D941E82C35FF84002A8678 /* Screens */,
 			);
 			path = "iOS Auth Handling UIKit";
@@ -166,13 +165,6 @@
 				D2D3C65B2C386D7E000F5E7C /* System */,
 			);
 			path = "Model Layer";
-			sourceTree = "<group>";
-		};
-		D2D941EA2C35FF9D002A8678 /* Nav Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Nav Coordinators";
 			sourceTree = "<group>";
 		};
 		D2D941ED2C36004A002A8678 /* Login */ = {
