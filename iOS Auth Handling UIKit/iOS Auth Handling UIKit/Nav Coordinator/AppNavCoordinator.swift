@@ -35,7 +35,8 @@ class AppNavCoordinator {
 // MARK: - Showing Screens
 extension AppNavCoordinator {
     func showHomeScreen() {
-        let controller = HomeViewController()
+        let viewModel = HomeViewController.ViewModel(networkHandler: .init(), tokenStorage: .init())
+        let controller = HomeViewController(viewModel: viewModel)
         controller.navDelegate = self
         presenter.setViewControllers([controller], animated: true)
     }
