@@ -48,7 +48,8 @@ extension AppNavCoordinator {
     }
 
     func showLoginScreen() {
-        let controller = LoginViewController()
+        let viewModel = LoginViewController.ViewModel(networkHandler: .init(), tokenStorage: .init())
+        let controller = LoginViewController(viewModel: viewModel)
         controller.navDelegate = self
         presenter.setViewControllers([controller], animated: true)
     }

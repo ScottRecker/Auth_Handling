@@ -13,12 +13,22 @@ protocol LoginNavDelegate: AnyObject {
 }
 
 class LoginViewController: UIViewController {
-    private lazy var emailTextField = UITextField.makeEmailField()
-    private lazy var passwordTextField = UITextField.makePasswordField()
+    private lazy var emailTextField = UITextField.makeEmailField(delegate: self)
+    private lazy var passwordTextField = UITextField.makePasswordField(delegate: self)
     private lazy var submitButton = UIButton.makeButton(title: "Submit", target: self, action: #selector(self.onSubmitTapped))
     private lazy var registerButton = UIButton.makeButton(title: "Register", target: self, action: #selector(self.onRegisterTapped))
 
     weak var navDelegate: LoginNavDelegate?
+    private let viewModel: ViewModel
+
+    required init(viewModel: ViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
 // MARK: - Lifecycle
@@ -62,7 +72,21 @@ private extension LoginViewController {
 extension LoginViewController {
 
     @objc func onSubmitTapped() {
-        navDelegate?.onLoginSuccessful()
+        viewModel.email = emailTextField.text
+        viewModel.password = passwordTextField.text
+
+        Task {
+            do {
+                try await viewModel.submitLogin()
+                await MainActor.run { [weak self] in
+                    self?.navDelegate?.onLoginSuccessful()
+                }
+            } catch {
+                await MainActor.run { [weak self] in
+                    self?.showOkAlert(title:"Error", message: error.localizedDescription)
+                }
+            }
+        }
     }
 
     @objc func onRegisterTapped() { 
@@ -70,6 +94,19 @@ extension LoginViewController {
     }
 }
 
+// MARK: - UITextFieldDelegate
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailTextField {
+            passwordTextField.becomeFirstResponder()
+        } else {
+            view.endEditing(true)
+        }
+
+        return false
+    }
+}
+
 #Preview {
-    LoginViewController()
+    LoginViewController(viewModel: .init(networkHandler: .init(), tokenStorage: .init()))
 }
