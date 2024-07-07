@@ -21,6 +21,8 @@
 		D2D3C65A2C386BB7000F5E7C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C6592C386BB7000F5E7C /* NetworkError.swift */; };
 		D2D3C65D2C386DA5000F5E7C /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C65C2C386DA5000F5E7C /* AccessToken.swift */; };
 		D2D3C65F2C386E8E000F5E7C /* AccessTokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C65E2C386E8E000F5E7C /* AccessTokenStorage.swift */; };
+		D2D3C6622C387483000F5E7C /* SecureFetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C6612C387483000F5E7C /* SecureFetchData.swift */; };
+		D2D3C6642C387A97000F5E7C /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C6632C387A97000F5E7C /* NetworkHandler.swift */; };
 		D2D941B92C35FED2002A8678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D941B82C35FED2002A8678 /* AppDelegate.swift */; };
 		D2D941C22C35FED4002A8678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2D941C12C35FED4002A8678 /* Assets.xcassets */; };
 		D2D941C52C35FED5002A8678 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D2D941C42C35FED5002A8678 /* Base */; };
@@ -42,6 +44,8 @@
 		D2D3C6592C386BB7000F5E7C /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		D2D3C65C2C386DA5000F5E7C /* AccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
 		D2D3C65E2C386E8E000F5E7C /* AccessTokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenStorage.swift; sourceTree = "<group>"; };
+		D2D3C6612C387483000F5E7C /* SecureFetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureFetchData.swift; sourceTree = "<group>"; };
+		D2D3C6632C387A97000F5E7C /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
 		D2D941B52C35FED2002A8678 /* iOS Auth Handling UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Auth Handling UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D941B82C35FED2002A8678 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2D941C12C35FED4002A8678 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,6 +121,15 @@
 			path = System;
 			sourceTree = "<group>";
 		};
+		D2D3C6602C387473000F5E7C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D2D3C6632C387A97000F5E7C /* NetworkHandler.swift */,
+				D2D3C6612C387483000F5E7C /* SecureFetchData.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		D2D941AC2C35FED2002A8678 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +175,7 @@
 		D2D941E92C35FF90002A8678 /* Model Layer */ = {
 			isa = PBXGroup;
 			children = (
+				D2D3C6602C387473000F5E7C /* Network */,
 				D2D3C65B2C386D7E000F5E7C /* System */,
 			);
 			path = "Model Layer";
@@ -251,6 +265,7 @@
 				D2D3C6462C373310000F5E7C /* UITextView+Extensions.swift in Sources */,
 				D2D3C6542C386B24000F5E7C /* ConfigurationError.swift in Sources */,
 				D2D3C6562C386B54000F5E7C /* FormError.swift in Sources */,
+				D2D3C6622C387483000F5E7C /* SecureFetchData.swift in Sources */,
 				D2D3C6422C372754000F5E7C /* Button+Extensions.swift in Sources */,
 				D2D3C6512C376AFA000F5E7C /* AppNavCoordinator.swift in Sources */,
 				D2D3C64B2C374A23000F5E7C /* HomeViewController.swift in Sources */,
@@ -261,6 +276,7 @@
 				D2D3C6442C3730ED000F5E7C /* UITextField+Extensions.swift in Sources */,
 				D2D941B92C35FED2002A8678 /* AppDelegate.swift in Sources */,
 				D2D3C65D2C386DA5000F5E7C /* AccessToken.swift in Sources */,
+				D2D3C6642C387A97000F5E7C /* NetworkHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
