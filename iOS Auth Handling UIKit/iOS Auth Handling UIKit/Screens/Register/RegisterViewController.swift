@@ -13,13 +13,23 @@ protocol RegisterNavDelegate: AnyObject {
 }
 
 class RegisterViewController: UIViewController {
-    private lazy var emailTextField = UITextField.makeEmailField()
-    private lazy var passwordTextField = UITextField.makePasswordField()
-    private lazy var confirmPasswordTextField = UITextField.makePasswordField(placeholder: "Confirm password")
+    private lazy var emailTextField = UITextField.makeEmailField(delegate: self)
+    private lazy var passwordTextField = UITextField.makePasswordField(delegate: self)
+    private lazy var confirmPasswordTextField = UITextField.makePasswordField(placeholder: "Confirm password", delegate: self)
     private lazy var registerButton = UIButton.makeButton(title: "Register", target: self, action: #selector(self.onRegisterTapped))
     private lazy var loginButton = UIButton.makeButton(title: "Login", target: self, action: #selector(self.onLoginTapped))
 
     weak var navDelegate: RegisterNavDelegate?
+    private let viewModel: ViewModel
+
+    required init(viewModel: ViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
 // MARK: - Lifecycle
@@ -70,14 +80,45 @@ private extension RegisterViewController {
 // MARK: - Actions
 extension RegisterViewController {
     @objc func onRegisterTapped() {
-        navDelegate?.onRegistrationComplete()
+        viewModel.email = emailTextField.text
+        viewModel.password = passwordTextField.text
+        viewModel.confirmPassword = confirmPasswordTextField.text
+
+        Task {
+            do {
+                try await viewModel.submitRegister()
+                await MainActor.run { [weak self] in
+                    self?.showOkAlert(title:"Registered", message: "Activation email sent to \(self?.viewModel.email ?? "Unknown")") { 
+                        self?.navDelegate?.onRegistrationComplete()
+                    }
+                }
+            } catch {
+                await MainActor.run { [weak self] in
+                    self?.showOkAlert(title:"Error", message: error.localizedDescription)
+                }
+            }
+        }
     }
     @objc func onLoginTapped() {
         navDelegate?.onLoginTapped()
     }
 }
 
+// MARK: - UITextFieldDelegate
+extension RegisterViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailTextField {
+            passwordTextField.becomeFirstResponder()
+        } else if textField == passwordTextField {
+            confirmPasswordTextField.becomeFirstResponder()
+        } else {
+            view.endEditing(true)
+        }
+
+        return false
+    }
+}
 
 #Preview {
-    RegisterViewController()
+    RegisterViewController(viewModel: .init(networkHandler: .init()))
 }

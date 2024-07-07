@@ -24,6 +24,7 @@
 		D2D3C6622C387483000F5E7C /* SecureFetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C6612C387483000F5E7C /* SecureFetchData.swift */; };
 		D2D3C6642C387A97000F5E7C /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C6632C387A97000F5E7C /* NetworkHandler.swift */; };
 		D2D3C6662C3AF11F000F5E7C /* NetworkRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C6652C3AF11F000F5E7C /* NetworkRoutes.swift */; };
+		D2D3C6682C3AF2EA000F5E7C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3C6672C3AF2EA000F5E7C /* RegisterViewModel.swift */; };
 		D2D941B92C35FED2002A8678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D941B82C35FED2002A8678 /* AppDelegate.swift */; };
 		D2D941C22C35FED4002A8678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2D941C12C35FED4002A8678 /* Assets.xcassets */; };
 		D2D941C52C35FED5002A8678 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D2D941C42C35FED5002A8678 /* Base */; };
@@ -48,6 +49,7 @@
 		D2D3C6612C387483000F5E7C /* SecureFetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureFetchData.swift; sourceTree = "<group>"; };
 		D2D3C6632C387A97000F5E7C /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
 		D2D3C6652C3AF11F000F5E7C /* NetworkRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRoutes.swift; sourceTree = "<group>"; };
+		D2D3C6672C3AF2EA000F5E7C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		D2D941B52C35FED2002A8678 /* iOS Auth Handling UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Auth Handling UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D941B82C35FED2002A8678 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2D941C12C35FED4002A8678 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				D2D3C64D2C375C16000F5E7C /* RegisterViewController.swift */,
+				D2D3C6672C3AF2EA000F5E7C /* RegisterViewModel.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				D2D3C6662C3AF11F000F5E7C /* NetworkRoutes.swift in Sources */,
 				D2D3C6512C376AFA000F5E7C /* AppNavCoordinator.swift in Sources */,
 				D2D3C64B2C374A23000F5E7C /* HomeViewController.swift in Sources */,
+				D2D3C6682C3AF2EA000F5E7C /* RegisterViewModel.swift in Sources */,
 				D2D3C6582C386B87000F5E7C /* KeychainError.swift in Sources */,
 				D2D3C6482C373391000F5E7C /* UIViewController+Extensions.swift in Sources */,
 				D2D3C65F2C386E8E000F5E7C /* AccessTokenStorage.swift in Sources */,

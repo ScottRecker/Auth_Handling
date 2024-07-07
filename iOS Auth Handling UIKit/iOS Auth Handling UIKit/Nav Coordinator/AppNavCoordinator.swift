@@ -41,7 +41,8 @@ extension AppNavCoordinator {
     }
 
     func showRegistrationScreen() {
-        let controller = RegisterViewController()
+        let viewModel = RegisterViewController.ViewModel(networkHandler: .init())
+        let controller = RegisterViewController(viewModel: viewModel)
         controller.navDelegate = self
         presenter.pushViewController(controller, animated: true)
     }
