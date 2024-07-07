@@ -10,6 +10,9 @@ import UIKit
 class AppNavCoordinator {
     let window: UIWindow
     var presenter: UINavigationController
+    
+    let tokenStorage = AccessTokenStorage()
+    let didCompleteFirstLaunch = "com.recker.authApp"
 
     init(window: UIWindow) {
         self.window = window
@@ -20,11 +23,17 @@ class AppNavCoordinator {
     }
 
     func start() {
-//        if isLoggedIn {
+        let userDefaults = UserDefaults.standard
+        if !userDefaults.bool(forKey: didCompleteFirstLaunch) {
+            tokenStorage.delete()
+            userDefaults.setValue(true, forKey: didCompleteFirstLaunch)
+        }
+
+        if tokenStorage.get() != nil {
+            showHomeScreen()
+        } else {
             showLoginScreen()
-//        } else {
-//            showLoginScreen()
-//        }
+        }
     }
 
     func logout() {
